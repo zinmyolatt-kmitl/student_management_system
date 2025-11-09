@@ -1,0 +1,31 @@
+{
+    "students": [
+        {
+            "id": "68011604",
+            "name": "david",
+            "age": 22,
+            "grade": "A",
+            "courses": [
+                "python"
+            ]
+        }
+    ],
+    "courses": [
+        {
+            "name": "python",
+            "instructor": "visit"
+        },
+        {
+            "name": "rust",
+            "instructor": "david"
+        },
+        {
+            "name": "logic",
+            "instructor": "carter"
+        },
+        {
+            "name": "calculus",
+            "instructor": "arkar"
+        }
+    ]
+}

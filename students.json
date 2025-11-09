@@ -1,0 +1,26 @@
+{
+    "students": [
+        {
+            "id": "S001",
+            "name": "david",
+            "age": 20,
+            "grade": "D",
+            "courses": [
+                "logic"
+            ]
+        },
+        {
+            "id": "S003",
+            "name": "carter",
+            "age": 30,
+            "grade": "C",
+            "courses": []
+        }
+    ],
+    "courses": [
+        {
+            "name": "logic",
+            "instructor": "david"
+        }
+    ]
+}
