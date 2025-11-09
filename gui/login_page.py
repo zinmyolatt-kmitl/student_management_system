@@ -22,6 +22,8 @@ class LoginPage(ttk.Frame):
 
         ttk.Button(self, text="Login", command=self.login).pack(pady=15)
 
+        self.valid_manager_names = ["manager001"]
+
     def login(self):
         role = self.role.get()
         name_or_id = self.name_entry.get().strip()
@@ -31,10 +33,15 @@ class LoginPage(ttk.Frame):
             return
 
         if role == "Manager":
-            self.controller.logged_student_id = None
-            self.controller.show_frame("HomeManager")
+            if name_or_id in self.valid_manager_names:
+                self.controller.logged_student_id = None
+                messagebox.showinfo("Welcome", f"Welcome {name_or_id}!")
+                self.controller.show_frame("HomeManager")
+            else:
+                messagebox.showerror("Access Denied", "Invalid manager name.")
             return
 
+        # Student login path
         student = self.controller.manager.search_student(name_or_id)
         if student:
             self.controller.logged_student_id = student["id"]
